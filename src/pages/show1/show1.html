@@ -20,7 +20,7 @@
   </ion-avatar>
   姓名：{{user.name}}, 性别{{user.sex}}, 序号{{user.no}}
 </ion-item>
-<button ion-button colors="primary" (click)="SortListASC()">
+<!--<button ion-button colors="primary" (click)="SortListASC()">
   降序排序
 </button>
 <button ion-button colors="primary" (click)="SortListDESC()">
@@ -29,4 +29,21 @@
 <button ion-button colors="primary" (click)="SortListRANDOM()">
   随机排序
 </button>
+-->
+  <!-- Segment in content -->
+  <ion-segment [(ngModel)]="relationship" color="primary">
+    <ion-segment-button value="asc" (ionSelect)="SortListASC()">
+      降序排序
+    </ion-segment-button>
+    <ion-segment-button value="desc" (ionSelect)="SortListDESC()">
+      升序排序
+    </ion-segment-button>
+      <ion-segment-button value="random" (ionSelect)="SortListRANDOM()">
+      随机排序
+    </ion-segment-button>
+  </ion-segment>
+
+
+
+
 </ion-content>
